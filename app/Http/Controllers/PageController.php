@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\travel;
+use App\Models\Travel;
 
 class PageController extends Controller
 {

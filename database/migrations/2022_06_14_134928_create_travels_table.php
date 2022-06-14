@@ -13,7 +13,7 @@ class CreateTravelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('travels', function (Blueprint $table) {
+        Schema::create('travel', function (Blueprint $table) {
             $table->id();
             $table->string('title', 100);
             $table->decimal('price', 6, 2)->nullable();
@@ -21,7 +21,7 @@ class CreateTravelsTable extends Migration
             $table->text('description')->nullable();
             $table->string('type', 50)->nullable();
             $table->string('image',255)->nullable();
-            $table->boolean('is-available')->default(false);
+            $table->boolean('is_available')->default(false);
             $table->string('location', 50)->nullable();
             $table->string('season', 10)->nullable();
             $table->timestamps();
