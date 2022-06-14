@@ -11,6 +11,7 @@ class TravelsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+       $travels = config('db.travels');
     }
 }
+
