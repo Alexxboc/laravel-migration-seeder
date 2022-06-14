@@ -9,7 +9,9 @@ use App\Models\Travel;
 class PageController extends Controller
 {
     public function index()
-    {
-        return view('welcome');
+    {   
+        $travel = Travel::all();
+        //dd($travel);
+        return view('welcome', compact('travel'));
     }
 }
