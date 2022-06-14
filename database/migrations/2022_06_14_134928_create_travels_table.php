@@ -15,6 +15,15 @@ class CreateTravelsTable extends Migration
     {
         Schema::create('travels', function (Blueprint $table) {
             $table->id();
+            $table->string('title', 100);
+            $table->decimal('price', 6, 2);
+            $table->string('city', 50);
+            $table->text('description');
+            $table->string('type', 50);
+            $table->string('image',255);
+            $table->boolean('is-available')->default(false);
+            $table->string('location', 50);
+            $table->string('season', 10);
             $table->timestamps();
         });
     }
@@ -29,3 +38,19 @@ class CreateTravelsTable extends Migration
         Schema::dropIfExists('travels');
     }
 }
+
+/* 
+Travel
+title
+price
+city
+description
+type
+image
+is_available
+location
+season
+
+
+
+*/
